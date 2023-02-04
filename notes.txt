@@ -1,0 +1,16 @@
+hibernate.cfg.xml 
+
+users.hbm.xml 
+
+
+SessionFactory -> hibernate.cfg.xml 
+Session 
+
+
+session.save(user); 
+
+Query q = session.createQuery("from UserEntity");
+q.get
+
+
+
