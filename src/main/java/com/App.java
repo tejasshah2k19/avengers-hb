@@ -23,6 +23,11 @@ public class App {
 		int choice;
 		Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
 		SessionFactory sf = cfg.buildSessionFactory();
+		//Session created using sessionFactory -> sessionFactory will read all confgiuration -> 
+		//session -> query execute .. 
+		
+		//insert list delete 
+		
 
 		Session session = sf.openSession();
 		UserEntity user = new UserEntity();
@@ -65,6 +70,16 @@ public class App {
 				break;
 
 			case 3:
+				
+				//delete from users where userId = 9 
+				System.out.println("Enter userId...");
+				int userId= scr.nextInt();
+				
+				UserEntity user1 =  session.get(UserEntity.class, userId); //select * from users where userid = 1 ;
+				session.delete(user1);
+				
+				//commit 
+				
 				break;
 
 			default:
