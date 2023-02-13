@@ -14,3 +14,10 @@ q.get
 
 
 
+-------------------------------
+1. hbm.xml
+--- mapping ? userEntity or any of the other entity-> Carts.hbm.xml
+after mapping we need to inform our hibernate.cfg.xml that we are willing to create a table called as users.
+
+when we are using spring-> @SpringBootApplication ->
+hibernate -> App.java
